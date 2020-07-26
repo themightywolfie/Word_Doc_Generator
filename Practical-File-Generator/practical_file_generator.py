@@ -108,7 +108,7 @@ def generate_file():
 
 
     program_code_content = document.add_paragraph(program_code_data,style='Content')
-    program_code_content.alignment= WD_ALIGN_PARAGRAPH.JUSTIFY
+    program_code_content.alignment= WD_ALIGN_PARAGRAPH.LEFT
     output = document.add_paragraph('Output',style='Sub_Head') 
     document.add_picture(picture_path,width=Inches(3.5),height=Inches(2))
 
