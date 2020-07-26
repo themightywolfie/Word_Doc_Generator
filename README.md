@@ -13,3 +13,11 @@ Students in engineering are required to create a docx file for all the practical
 3. Content - Times New Roman, 12
 4. Header and Footer - Times New Roman, 12, Bold
 
+# Sections Generated in Word File
+1. Header containing ID Number and Subject Name and Code 
+2. Heading
+3. Aim
+4. Program Code
+5. Output
+6. Conclusion
+
