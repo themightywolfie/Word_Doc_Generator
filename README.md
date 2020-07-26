@@ -1,6 +1,11 @@
 # Word_Doc_Generator
 Students in engineering are required to create a docx file for all the practicals they perform in labs. The most annoying and tedious task is to format the data. To save time, I created a Python program to generate a docx file with predefined formatting.
 
+# Instructions and Notes
+1. The program is completely GUI based so no need to worry about running it from CLI
+2. You can add only one picture as of now. To add more pictures you will need to add them manually by editing the document
+3. The picture added will be of size 3.5 inches x 2 inches so most probably you will need to resize it 
+
 # Libraries required to run this program
 1. docx2pdf - pip install docx2pdf
 2. python-docx - pip install python-docx
@@ -20,4 +25,5 @@ Students in engineering are required to create a docx file for all the practical
 4. Program Code
 5. Output
 6. Conclusion
+
 
