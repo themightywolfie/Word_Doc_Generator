@@ -86,7 +86,7 @@ title.alignment=WD_ALIGN_PARAGRAPH.CENTER
 aim = document.add_paragraph("Aim",style='Sub_Head')
 
 #Adding content to sub-title
-aim_content = document.add_paragraph("",style='Content')
+aim_content = document.add_paragraph(aim_data,style='Content')
 aim_content.alignment= WD_ALIGN_PARAGRAPH.JUSTIFY
 program_code = document.add_paragraph("Program Code",style='Sub_Head')
 
