@@ -4,8 +4,9 @@ Students in engineering are required to create a docx file for all the practical
 # Instructions and Notes
 1. The program is completely GUI based so no need to worry about running it from CLI
 2. You can add only one picture as of now. To add more pictures you will need to add them manually by editing the document
-3. The picture added will be of size 3.5 inches x 2 inches so most probably you will need to resize it 
-4. This program can now also run without need of installing Python.Download the entire repository and then check for the exe file in 'dist' folder
+3. The picture added will be of size 3.5 inches x 2 inches so most probably you will need to resize it after the doc file is created
+4. This program can now also run without need of installing Python.Download the entire repository and then check for the exe file in '/Practical-File-Generator-Windows/dist' folder
+5. If you are using the exe file, anti-virus softwares will try to block it as I created it using PyInstaller which created unsigned binary files. You can still use it if you can allow the file the execute
 
 # Libraries required to run this program
 1. python-docx - pip install python-docx
