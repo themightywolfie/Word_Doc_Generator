@@ -5,7 +5,7 @@ Students in engineering are required to create a docx file for all the practical
 1. The program is completely GUI based so no need to worry about running it from CLI
 2. You can add only one picture as of now. To add more pictures you will need to add them manually by editing the document
 3. The picture added will be of size 3.5 inches x 2 inches so most probably you will need to resize it 
-
+4. This program can now also run without need of installing Python. Check for the exe file in 'dist' folder
 # Libraries required to run this program
 1. python-docx - pip install python-docx
 2. tkinter - pip install tk
