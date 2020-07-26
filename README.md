@@ -10,7 +10,7 @@ Students in engineering are required to create a docx file for all the practical
 1. python-docx - pip install python-docx
 2. tkinter - pip install tk
 
-# Predfined Styles in the Program
+# Predefined Styles in the Program
 1. Heading - Times New Roman, 16, Bold
 2. Sub-Heading - Times New Roman, 14, Bold
 3. Content - Times New Roman, 12
