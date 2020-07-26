@@ -6,7 +6,9 @@ from docx.shared import Pt
 from docx.shared import Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.style import WD_STYLE_TYPE
+import os
 import tkinter
+
 
 #Initialsing Document object
 document = Document()
@@ -58,7 +60,7 @@ window = Tk()
 
 window.title("Welcome to File Generator")
 
-window.geometry('650x500')
+window.geometry('650x550')
 
 file=""
 out_file=""
@@ -90,8 +92,6 @@ def generate_file():
     program_code_data=prog_entry.get("1.0",tkinter.END)       #Insert Code Here
     picture_path=out_file
     conclusion_data=concl_entry.get()       #Insert Conclusion Here
-
-
     #Adding header
     header_content = header.paragraphs[0]
     header_content.text = header_data
@@ -117,17 +117,17 @@ def generate_file():
     program_code_content = document.add_paragraph(program_code_data,style='Content')
     program_code_content.alignment= WD_ALIGN_PARAGRAPH.JUSTIFY
     output = document.add_paragraph('Output',style='Sub_Head') 
-    document.add_picture(picture_path,width=Inches(1.25))
+    document.add_picture(picture_path,width=Inches(3.5),height=Inches(2))
 
     picture = document.paragraphs[-1]
     picture.alignment= WD_ALIGN_PARAGRAPH.CENTER
     conclusion = document.add_paragraph('Conclusion',style='Sub_Head')
     conclusion_content = document.add_paragraph(conclusion_data,style='Content')
     conclusion_content.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-
-    document.save('template_test.docx')
-    window.destroy()
     
+    dir_ = filedialog.askdirectory()    
+    document.save(dir_+"\\"+save_entry.get()+".docx")
+    window.destroy()
 
 id_label = Label(window,text="Enter your ID Number : ",anchor=W,justify=LEFT,width=30)
 id_label.grid(column=0,row=0)
@@ -189,6 +189,14 @@ concl_entry.grid(column=1,row=12)
 
 Label(window,text="").grid(column=0,row=13)
 
+save_label = Label(window,text="Save with name : ",anchor=W,justify=LEFT,width=30)
+save_label.grid(column=0,row=14)
+
+save_entry = Entry(window,width=50)
+save_entry.grid(column=1,row=14)
+
+Label(window,text="").grid(column=0,row=15)
+
 gen_btn= Button(window,text="Generate File",command=generate_file)
-gen_btn.grid(column=1,row=14)
+gen_btn.grid(column=1,row=16)
 window.mainloop()
