@@ -61,13 +61,8 @@ window.title("Welcome to File Generator")
 
 window.geometry('650x550')
 
-file=""
-out_file=""
 
-def choose_prog():
-    global file
-    file=filedialog.askopenfilename()
-    prog_path_label.configure(text=file)
+out_file=""
 
 def choose_out():
     global out_file
