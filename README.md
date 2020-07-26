@@ -9,7 +9,7 @@ Students in engineering are required to create a docx file for all the practical
 # Libraries required to run this program
 1. docx2pdf - pip install docx2pdf
 2. python-docx - pip install python-docx
-   https://python-docx.readthedocs.io/en/latest/
+   Link to documentation of docx : https://python-docx.readthedocs.io/en/latest/
 3. tkinter - pip install tk
 
 # Predfined Styles in the Program
