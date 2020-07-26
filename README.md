@@ -7,9 +7,8 @@ Students in engineering are required to create a docx file for all the practical
 3. The picture added will be of size 3.5 inches x 2 inches so most probably you will need to resize it 
 
 # Libraries required to run this program
-1. docx2pdf - pip install docx2pdf
-2. python-docx - pip install python-docx
-3. tkinter - pip install tk
+1. python-docx - pip install python-docx
+2. tkinter - pip install tk
 
 # Predfined Styles in the Program
 1. Heading - Times New Roman, 16, Bold
