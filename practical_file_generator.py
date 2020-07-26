@@ -59,11 +59,9 @@ window = Tk()
 
 window.title("Welcome to File Generator")
 
-window.geometry('650x550')
-
+window.geometry('650x575')
 
 out_file=""
-
 def choose_out():
     global out_file
     out_file=filedialog.askopenfilename()
@@ -74,13 +72,14 @@ def generate_file():
     global out_file
     print("ID Number : ",id_entry.get())
     print("Subject : ",subj_entry.get())
+    print("Department :",depart_entry.get())
     print("Heading : ",head_entry.get())
     print("Aim : ",aim_entry.get())
     print("Program Code: ",prog_entry.get("1.0",tkinter.END))
     print("Output Screenshot Path : ",out_file)
     print("Conclusion : ",concl_entry.get())
     header_data=id_entry.get()+"\t\t"+subj_entry.get()     #Insert Header Here
-    footer_data = "DEPSTAR(CSE)"
+    footer_data = depart_entry.get()
     title_data=head_entry.get()            #Insert Heading Here
     aim_data=aim_entry.get()  #Insert Aim Here
     program_code_data=prog_entry.get("1.0",tkinter.END)       #Insert Code Here
@@ -139,58 +138,66 @@ subj_entry.grid(column=1,row=2)
 
 Label(window,text="").grid(column=0,row=3)
 
-head_label = Label(window,text="Enter Heading : ",anchor=W,justify=LEFT,width=30)
-head_label.grid(column=0,row=4)
+depart_label = Label(window,text="Enter your Department : ",anchor=W,justify=LEFT,width=30)
+depart_label.grid(column=0,row=4)
 
-head_entry = Entry(window,width=50)
-head_entry.grid(column=1,row=4)
+depart_entry = Entry(window,width=50)
+depart_entry.grid(column=1,row=4)
 
 Label(window,text="").grid(column=0,row=5)
 
-aim_label = Label(window,text="Enter Aim : ",anchor=W,justify=LEFT,width=30)
-aim_label.grid(column=0,row=6)
+head_label = Label(window,text="Enter Heading : ",anchor=W,justify=LEFT,width=30)
+head_label.grid(column=0,row=6)
 
-aim_entry = Entry(window,width=50)
-aim_entry.grid(column=1,row=6)
+head_entry = Entry(window,width=50)
+head_entry.grid(column=1,row=6)
 
 Label(window,text="").grid(column=0,row=7)
 
-prog_label = Label(window,text="Program Code : ",anchor=W,justify=LEFT,width=30)
-prog_label.grid(column=0,row=8)
+aim_label = Label(window,text="Enter Aim : ",anchor=W,justify=LEFT,width=30)
+aim_label.grid(column=0,row=8)
 
-prog_entry = scrolledtext.ScrolledText(window,width=30,height=10)
-prog_entry.grid(column=1,row=8)
-
+aim_entry = Entry(window,width=50)
+aim_entry.grid(column=1,row=8)
 
 Label(window,text="").grid(column=0,row=9)
 
-out_label = Label(window,text="Upload Output Screenshot : ",anchor=W,justify=LEFT,width=30)
-out_label.grid(column=0,row=10)
+prog_label = Label(window,text="Program Code : ",anchor=W,justify=LEFT,width=30)
+prog_label.grid(column=0,row=10)
 
-out_path_label = Label(window,text="",anchor=W,justify=LEFT,width=30)
-out_path_label.grid(column=1,row=10)
+prog_entry = scrolledtext.ScrolledText(window,width=30,height=10)
+prog_entry.grid(column=1,row=10)
 
-out_btn = Button(window,text="Choose Picture",command=choose_out)
-out_btn.grid(column=2,row=10)
 
 Label(window,text="").grid(column=0,row=11)
 
-concl_label = Label(window,text="Enter Conclusion : ",anchor=W,justify=LEFT,width=30)
-concl_label.grid(column=0,row=12)
+out_label = Label(window,text="Upload Output Screenshot : ",anchor=W,justify=LEFT,width=30)
+out_label.grid(column=0,row=12)
 
-concl_entry = Entry(window,width=50)
-concl_entry.grid(column=1,row=12)
+out_path_label = Label(window,text="",anchor=W,justify=LEFT,width=30)
+out_path_label.grid(column=1,row=12)
+
+out_btn = Button(window,text="Choose Picture",command=choose_out)
+out_btn.grid(column=2,row=12)
 
 Label(window,text="").grid(column=0,row=13)
 
-save_label = Label(window,text="Save with name : ",anchor=W,justify=LEFT,width=30)
-save_label.grid(column=0,row=14)
+concl_label = Label(window,text="Enter Conclusion : ",anchor=W,justify=LEFT,width=30)
+concl_label.grid(column=0,row=14)
 
-save_entry = Entry(window,width=50)
-save_entry.grid(column=1,row=14)
+concl_entry = Entry(window,width=50)
+concl_entry.grid(column=1,row=14)
 
 Label(window,text="").grid(column=0,row=15)
 
+save_label = Label(window,text="Save with name : ",anchor=W,justify=LEFT,width=30)
+save_label.grid(column=0,row=16)
+
+save_entry = Entry(window,width=50)
+save_entry.grid(column=1,row=16)
+
+Label(window,text="").grid(column=0,row=17)
+
 gen_btn= Button(window,text="Generate File",command=generate_file)
-gen_btn.grid(column=1,row=16)
+gen_btn.grid(column=1,row=18)
 window.mainloop()
